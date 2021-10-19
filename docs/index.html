@@ -1,16 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Armando Hernandez CV</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1 class="text-globant prose">Hola Mundo</h1>
-        <div class=" w-full flex flex-col bg-blue-400 space-x-4">
-            <p class=" text-white w-16 h-16 bg-indigo-50">1</p>
+<head>
+    <meta charset="UTF-8">
+    <title>Armando Hernandez CV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <button class="download">
+        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M5,20h14v-2H5V20z M19,9h-4V3H9v6H5l7,7L19,9z"/></g></svg>
+    </button>
+    <div class="contact_container">
+
+        <div class="contact_form">
+            <form id="contact">
+                <label>
+                    Nombre:
+                    <input type="text" name="name" id="name" placeholder="nombre">
+                </label>
+                <label>
+                    Correo electrónico:
+                    <input type="email" name="email" id="email" placeholder="nombre">
+                </label>
+                <label>
+                    Mensaje:
+                    <textarea name="message" id="message"></textarea>
+                </label>
+
+                <button class="submit_btn" onclick="Submit()" type="button">Enviar</button>
+            </form>
         </div>
-        <script slot="script.js" type="text/javascript"></script>
-    </body>
+
+        <button class="contact">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff"><path d="M0 0h24v24H0z" fill="none"/><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
+        </button>
+
+    </div>
+
+    <div class="cv_container">
+        <div class="title">
+            <h1 class="">ARMANDO HERNANDEZ DE LA VEGA</h1>
+            <hr/>
+            <h2 class="">Desarrollador WEB</h2>
+        </div>
+
+        <p>Buenas</p>
+    </div>
+
+
+
+    <script src="./script.min.js" type="text/javascript"></script>
+</body>
 </html>
