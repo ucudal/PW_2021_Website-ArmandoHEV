@@ -10,36 +10,60 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
 </head>
-<body>
+<body >
 
-    <button class="download">
-        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M5,20h14v-2H5V20z M19,9h-4V3H9v6H5l7,7L19,9z"/></g></svg>
-    </button>
-    <div class="contact_container">
-
-        <div class="contact_form">
-            <form id="contact">
-                <label>
-                    Nombre:
-                    <input type="text" name="name" id="name" placeholder="nombre">
-                </label>
-                <label>
-                    Correo electrónico:
-                    <input type="email" name="email" id="email" placeholder="nombre">
-                </label>
-                <label>
-                    Mensaje:
-                    <textarea name="message" id="message"></textarea>
-                </label>
-
-                <button class="submit_btn" onclick="Submit()" type="button">Enviar</button>
-            </form>
-        </div>
-
-        <button class="contact">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff"><path d="M0 0h24v24H0z" fill="none"/><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
+    <div id="work" class="floating_btn_container work" onclick="openModal()">
+        <button class="floating_btn" style="background-color: #265e80;">
+            <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="#fff"
+                    xmlns="http://www.w3.org/2000/svg">
+                <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M17 7C17 5.34315 15.6569 4 14 4H10C8.34315 4 7 5.34315 7 7H6C4.34315 7 3 8.34315 3 10V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V10C21 8.34315 19.6569 7 18 7H17ZM14 6H10C9.44772 6 9 6.44772 9 7H15C15 6.44772 14.5523 6 14 6ZM6 9H18C18.5523 9 19 9.44772 19 10V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18V10C5 9.44772 5.44772 9 6 9Z"
+                        fill="#fff"/>
+            </svg>
         </button>
+        <div class="floating_indicator glass">
+            Trabaja conmigo
+        </div>
+    </div>
 
+    <div class="floating_btn_container download">
+        <button class="floating_btn" style="background-color: #e58c39;">
+            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M5,20h14v-2H5V20z M19,9h-4V3H9v6H5l7,7L19,9z"/></g></svg>
+        </button>
+        <div class="floating_indicator glass">
+            Descargar CV
+        </div>
+    </div>
+
+    <div id="overlay"> </div>
+    <div id="modal" class="modal_card">
+        <span style="margin-left: 95%" onclick="closeModal()">x</span>
+        <h1>Trabaja conmigo!</h1>
+        <form id="contact">
+            <label>
+                Nombre:
+                <input type="text" name="name" id="name" placeholder="Nombre">
+            </label>
+            <label>
+                Correo electrónico:
+                <input type="email" name="email" id="email" placeholder="Correo electrónico">
+            </label>
+            <label>
+                Mensaje:
+                <textarea name="message" id="message" placeholder="Mensaje"></textarea>
+            </label>
+
+            <button class="generic_btn" onclick="Submit()" type="button">Enviar</button>
+
+            <p id="error_contact" class="error_msg">¡Llene todos los campos!</p>
+            <p id="success_contact" class="success_msg">¡Gracias!</p>
+        </form>
     </div>
 
     <div class="cv_container">
@@ -48,12 +72,40 @@
             <hr/>
             <h2 class="">Desarrollador WEB</h2>
         </div>
+        <div class="cv_low_section">
+            <div class="left_part" id="left_section">
+                <h1>PERFIL</h1>
+                <hr/>
+                <h3>Ingeniero en informática actualmente cursando estudios en la
+                    Universidad Católicadel Uruguay, con  experiencia en desarrollo web
+                    y móvil, habilidad para la arquitectura de aplicaciones web, asi como
+                    metodologias de gestión de proyectos como SCRUM y KANBAN.
+                    Ademas de haber impartido capacitaciones a equipos en Javascript y
+                    node.js, React.js, Next.js.</h3>
+                <h1 style="margin-top: 2em">EXPERIENCIA</h1>
+                <hr/>
 
-        <p>Buenas</p>
+            </div>
+            <div class="right_part">
+                <div class="icon_label"> </div>
+                <div class="icon_label"> </div>
+                <div class="icon_label"> </div>
+                <div class="icon_label"> </div>
+                <div id="education">
+                    <h1>EDUCACIÓN</h1>
+                    <hr/>
+                </div>
+                <div id="abilities">
+                    <h1>HABILIDADES</h1>
+                    <hr/>
+
+                </div>
+            </div>
+        </div>
     </div>
 
 
 
-    <script src="./script.min.js" type="text/javascript"></script>
+    <script src="../src/script.js" type="text/javascript"></script>
 </body>
 </html>
