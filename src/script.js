@@ -13,7 +13,7 @@ const Submit = () => {
         error.style.display = 'block'
         success.style.display = 'none'
     } else {
-        fetch("http://localhost:3000/contacto", {
+        fetch("https://PW2021-APINode-ArmandoHEV.armandohernan11.repl.co/contacto", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -56,7 +56,7 @@ const closeModal = () => {
 }
 
 const generateExperience = () => {
-    fetch("http://localhost:3000/getExperience")
+    fetch("https://PW2021-APINode-ArmandoHEV.armandohernan11.repl.co/getExperience")
         .then(res => {
             return res.json();
         })
@@ -86,7 +86,7 @@ const generateExperience = () => {
 }
 
 const generateEdu = () => {
-    fetch("http://localhost:3000/getEducation")
+    fetch("https://PW2021-APINode-ArmandoHEV.armandohernan11.repl.co/getEducation")
         .then(res => {
             return res.json();
         })
@@ -114,7 +114,7 @@ const generateEdu = () => {
 }
 
 const generateAbilities = () => {
-    fetch("http://localhost:3000/getAbilities")
+    fetch("https://PW2021-APINode-ArmandoHEV.armandohernan11.repl.co/getAbilities")
         .then(res => {
             return res.json();
         })
