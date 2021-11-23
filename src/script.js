@@ -14,6 +14,7 @@ const Submit = () => {
         success.style.display = 'none'
     } else {
         fetch("https://PW2021-APINode-ArmandoHEV.armandohernan11.repl.co/contacto", {
+            mode: "cors",
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
